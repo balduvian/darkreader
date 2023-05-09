@@ -1,6 +1,6 @@
 <h2 align="center">Contributions</h2>
 
-You can contribute to and help Dark Reader's active open development in many ways. We provide this document in order to make it as east as possible to contribute. Read on below to learn how and thank you in advance. All contributors must adhere to Dark Reader's [code of conduct](https://github.com/darkreader/darkreader/blob/main/CODE_OF_CONDUCT.md).
+You can contribute to and help Dark Reader's active open development in many ways. We provide this document in order to make it as easy as possible to contribute. Read on below to learn how and thank you in advance. All contributors must adhere to Dark Reader's [code of conduct](https://github.com/darkreader/darkreader/blob/main/CODE_OF_CONDUCT.md).
 
 ## Sponsor
 
