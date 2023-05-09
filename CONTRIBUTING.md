@@ -253,11 +253,22 @@ Dark Reader releases use [semantic versioning](https://semver.org/). Minor relea
 
 ### Technologies
 
-Dark Reader uses [TypeScript](https://www.typescriptlang.org/) for the api, extension scripts, and extension ui. The extension popup ui uses [React](https://react.dev/) and [Less](https://lesscss.org/) for styling. It is build using [Node.js](https://nodejs.org/).
+Dark Reader uses [TypeScript](https://www.typescriptlang.org/) for the api, extension scripts, and extension ui. The extension popup ui uses [Malevic.js](https://github.com/alexanderby/malevic) with TSX and [Less](https://lesscss.org/) for styling. It is build using [Node.js](https://nodejs.org/).
 
 ### Code Style
 
 **Please preserve the code style** (for example, whitespaces, etc.). Code style is enforced automatically through [eslint](https://eslint.org/) it can be executed by running `npm run code-style`. For a full technical description of code style, see [.eslint.js](https://github.com/darkreader/darkreader/blob/main/.eslintrc.js) and [.eslintplugin.js](https://github.com/darkreader/darkreader/blob/main/.eslintplugin.js).  
+
+As a broad overview:
+* Code in a type checked style
+* Use 4 spaces instead of tabs.
+* Use `function` over `=>` for top level functions.
+* Finish lines with semicolon `;`.
+* Always use braces `{}` with `if`.
+* Prefer explaining the code through the syntax itself instead of comments.
+* Comments `//` should be used to explain non-obvious work-arounds and additions for performance
+* Data types should be described by `interface`
+* Do not put spaces on the inside of curly `{}` blocks in expressions
 
 ### CI
 
