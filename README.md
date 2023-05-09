@@ -16,6 +16,10 @@ If the help page doesn't answer your question, open up a new [discussion](https:
 
 ## How to contribute
 
+The development of Dark Reader is open and takes place on GitHub. You may contribute by adding translations, adding a website that is already dark, fixing incorrect inversions, adding features, and fixing bugs. Please read below for how to contribute.
+
+Dark Reader has a code of conduct that contributors must adhere to. Please read the code of conduct in [CODE_OF_CONDUCT.md](https://github.com/darkreader/darkreader/blob/main/CODE_OF_CONDUCT.md).
+
 Read more about contributing to Dark Reader in [CONTRIBUTING.md](https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md).
 
 ## Building for use

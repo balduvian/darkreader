@@ -1,6 +1,6 @@
 <h2 align="center">Contributions</h2>
 
-<p align="center">You can contribute to and help Dark Reader in many ways. Read on below to learn how and thank you in advance.</p>
+You can contribute to and help Dark Reader's active open development in many ways. We provide this document in order to make it as east as possible to contribute. Read on below to learn how and thank you in advance. All contributors must adhere to Dark Reader's [code of conduct](https://github.com/darkreader/darkreader/blob/main/CODE_OF_CONDUCT.md).
 
 ## Sponsor
 
@@ -185,13 +185,42 @@ CSS
 
 ## Adding new features or fixing bugs
 
-If you would like to **add a new feature** to Dark Reader or **fix a bug**, **submit an issue** in GitHub (if there is no existing one), **discuss** it with active contributors, and wait for **approval**.
+### Requesting a Feature
+
+If you have an idea for a new Dark Reader feature, first check to make sure it has not already been requested in [GitHub issues](https://github.com/darkreader/darkreader/issues).
+Before spending effort on making a change to implement the feature, please submit the feature request as an issue so that it can be discusses with active contributors and you are given approval to begin.
+
+### Submitting a Bug Report 
+
+If you find a bug in Dark Reader, first check to make sure that it has not already been reported asn an [issue on GitHub](https://github.com/darkreader/darkreader/issues). If not, please use the Bug Report template for your issue.
+Provide steps to reproduce the bug and make sure that the bug can be reproduced in a new unmodified web browser profile with Dark Reader installed as the only extension.
+
+### Creating a Pull Request
+
+After you have been given approval to implement a feature or fix a bug, follow these steps to create a pull request:
+
+1. Create a fork of the repo on your personal GitHub
+2. Add code that implements your fix
+4. Launch the extension in your own browser to test your changes (See Local Setup section below)
+3. Run local tests with `npm test` and verify that they all pass
+4. Format your code with `npm run code-style` (see Code Style section below)
+5. Make commits and push to your fork
+6. Verify that CI tests pass on your fork (See CI section below)
+7. Create a pull request on your fork targeting the `darkreader:main` branch
+
+Make sure that in your pull request you mention the issue that it is related to. If you were communicating with a specific active contributor in the issue discussion before starting the pull request, please also mention that user. 
+
+After you create your pull request, it may be approved and merged into the repo, have changes requested, or be rejected with explanation. Please monitor that status of your pull request so that you can iterate upon it if requested.
+You are encouraged to continue to monitor the status of your pull request and original issue even after your pull request is merged until the next minor release.
+In the case that other contributors make suggestions or find bugs in your code you should be prepared to iterate.
+
+### Local Setup
 
 To build and debug the extension **install the [Node.js](https://nodejs.org/)** LTS version.
 Install development dependencies by running `npm install` in the project root folder.
 Then execute `npm run debug`.
 
-#### Chrome and Edge
+##### Chrome and Edge
 
 - Open the `chrome://extensions` page.
 - Disable the official Dark Reader version.
@@ -199,7 +228,7 @@ Then execute `npm run debug`.
 - Click **Load unpacked extension** button.
 - Navigate to the project's `build/debug/chrome` folder.
 
-#### Firefox
+##### Firefox
 
 - Open the `about:addons` page.
 - Disable the official Dark Reader version.
@@ -209,12 +238,34 @@ Then execute `npm run debug`.
 
 If you execute `npm run debug:watch` instead of `npm run debug`, it will automatically recompile after making any code changes.
 
-## Tips
+### Active Contributors
+
+Dark Reader has a team of active contributors who manage approving issues and pull requests. Dark Reader uses [Github Discussions](https://github.com/darkreader/darkreader/discussions) for communicating with active contributors.
+
+### Branch Organization
+
+All development on Dark Reader is done directly on the branch `main`. All code submitted to the `main` branch must be non-breaking and with all tests passing. `main` should be in a state where it can always be released into the next minor version of Dark Reader. 
+
+### Releases
+
+Dark Reader releases use [semantic versioning](https://semver.org/). Minor releases occur roughly once a month. Each release comes with changes documented in the [CHANGELOG.md](https://github.com/darkreader/darkreader/blob/main/CHANGELOG.md). As of version 4.9, bug fixes, website improvements, and minor features are introduced as a patch increment.
+
+### Technologies
+
+Dark Reader uses [TypeScript](https://www.typescriptlang.org/) for the api, extension scripts, and extension ui. The extension popup ui uses [React](https://react.dev/) and [Less](https://lesscss.org/) for styling.
+
+### Code Style
+
+**Please preserve the code style** (for example, whitespaces, etc.). Code style is enforced automatically through [eslint](https://eslint.org/) it can be executed by running `npm run code-style`. For a full technical description of code style, see [.eslint.js](https://github.com/darkreader/darkreader/blob/main/.eslintrc.js) and [.eslintplugin.js](https://github.com/darkreader/darkreader/blob/main/.eslintplugin.js).  
+
+### Tips
 
 You can use any text editor or web IDE (for example, [Visual Studio Code](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/)) for editing the code.
 
-**Please preserve the code style** (for example, whitespaces, etc.). It can be done automatically by executing `npm run code-style`.
+### CI
 
-Run tests by executing `npm test` to verify it will pass.
 
-If your code is ready to be reviewed and merged, you can submit a **pull request** and wait for a **review**.
+
+## Attribution
+
+Part of this contributing document has been adapted from the [React](https://github.com/facebook/react/blob/main/CONTRIBUTING.md) and [ZSTD](https://github.com/facebook/zstd/blob/dev/CONTRIBUTING.md) repo contributing documents.
