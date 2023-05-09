@@ -197,6 +197,7 @@ Provide steps to reproduce the bug and make sure that the bug can be reproduced 
 
 ### Creating a Pull Request
 
+You can use any text editor or web IDE (for example, [Visual Studio Code](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/)) for editing the code.
 After you have been given approval to implement a feature or fix a bug, follow these steps to create a pull request:
 
 1. Create a fork of the repo on your personal GitHub
@@ -252,19 +253,16 @@ Dark Reader releases use [semantic versioning](https://semver.org/). Minor relea
 
 ### Technologies
 
-Dark Reader uses [TypeScript](https://www.typescriptlang.org/) for the api, extension scripts, and extension ui. The extension popup ui uses [React](https://react.dev/) and [Less](https://lesscss.org/) for styling.
+Dark Reader uses [TypeScript](https://www.typescriptlang.org/) for the api, extension scripts, and extension ui. The extension popup ui uses [React](https://react.dev/) and [Less](https://lesscss.org/) for styling. It is build using [Node.js](https://nodejs.org/).
 
 ### Code Style
 
 **Please preserve the code style** (for example, whitespaces, etc.). Code style is enforced automatically through [eslint](https://eslint.org/) it can be executed by running `npm run code-style`. For a full technical description of code style, see [.eslint.js](https://github.com/darkreader/darkreader/blob/main/.eslintrc.js) and [.eslintplugin.js](https://github.com/darkreader/darkreader/blob/main/.eslintplugin.js).  
 
-### Tips
-
-You can use any text editor or web IDE (for example, [Visual Studio Code](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/)) for editing the code.
-
 ### CI
 
-
+This repo and thus any forks you create will have ontinuous integration tests through Github Actions that run on pull request or push. In addition to local testing with `npm test`, please make sure that all CI tests pass on your fork before proceeding with creating a pull request.
+CI tests are configured in `.github/workflows`.
 
 ## Attribution
 
